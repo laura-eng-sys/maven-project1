@@ -1,11 +1,11 @@
 # You can change this base image to anything else
 # But make sure to use the correct version of Java
-FROM eclipse-temurin:17-jdk-alpine
+FROM openjdk:17-jdk-slim
 
 # Simply the artifact path
 ARG artifact=Mavenjar/target/Mavenjar-1.0-SNAPSHOT.jar
 
-WORKDIR /opt/app
+WORKDIR app
 
 COPY ${artifact} app.jar
 
