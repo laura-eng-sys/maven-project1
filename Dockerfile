@@ -2,12 +2,9 @@
 # But make sure to use the correct version of Java
 FROM openjdk:17-jdk-alpine
 
-# Simply the artifact path
-ARG artifact=Mavenjar/target/Mavenjar-1.0-SNAPSHOT.jar
-
 WORKDIR app
 
-COPY ${artifact} app.jar
+COPY /target/Mavenjar-1.0-SNAPSHOT.jar app.jar
 
 # This should not be changed
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
