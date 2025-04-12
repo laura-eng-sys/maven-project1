@@ -29,12 +29,18 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass>com.jarmaven.project1.App</mainClass>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>com.jarmaven.project1.App</mainClass>
+            </manifest>
+          </archive>
         </configuration>
+        ...
       </plugin>
     </plugins>
   </build>
-
+  ...
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
